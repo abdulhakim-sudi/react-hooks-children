@@ -1,35 +1,41 @@
-import React from "react";
-import Container from "./Container";
+import React from 'react';
+import Container from './Container';
 
 function App() {
   return (
-    <div className="App">
-      <Container header="Example header" direction="horizontal">
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
-        <div>This is an example!</div>
+    <div>
+      <Container
+        direction="column"
+        header="🌸 Anime World"
+        textPosition="center"
+        contentPosition="center"
+      >
+        <p>Explore your favorite anime shows and connect with fellow fans!</p>
       </Container>
-      <Container header="Example header" textPosition="center">
-        <img
-          alt="turtle"
-          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
-        />
-        <img
-          alt="turtle"
-          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
-        />
-        <img
-          alt="turtle"
-          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
-        />
-        <img
-          alt="turtle"
-          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
-        />
+
+      <Container
+        direction="row"
+        header="🍽️ Dubai Eats"
+        textPosition="left"
+        contentPosition="right"
+      >
+        <ul>
+          <li>Al Baik</li>
+          <li>Nusr-Et Steakhouse</li>
+          <li>Zuma Dubai</li>
+        </ul>
+      </Container>
+
+      <Container
+        direction="row"
+        header="💱 Forex Tracker"
+        textPosition="right"
+        contentPosition="left"
+      >
+        <div>
+          <img src="https://via.placeholder.com/150" alt="Forex chart" />
+          <p>Track the latest market trends and exchange rates in real time.</p>
+        </div>
       </Container>
     </div>
   );

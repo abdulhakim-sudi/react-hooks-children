@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
+import './Container.css';
 
 function Container({
-  header,
-  children,
-  textPosition = "", // possible values: left, right, center
-  direction = "horizontal", // possible values: vertical, horizontal
-  contentPosition = "center", // possible values: left, right, center
+  direction = "row",
+  header = "",
+  textPosition = "left",
+  contentPosition = "right",
+  children
 }) {
   return (
-    <div className={`container ${textPosition}`}>
-      {header ? <h2>{header}</h2> : null}
-
-      <div className={`container-children ${direction} ${contentPosition}`}>
+    <div className={`container ${direction}`}>
+      {header && <h2 className={`text-${textPosition}`}>{header}</h2>}
+      <div className={`content-${contentPosition}`}>
         {children}
       </div>
     </div>
